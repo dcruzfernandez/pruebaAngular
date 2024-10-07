@@ -7,7 +7,7 @@ import { ListComponent } from './components/list/list.component';
 
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule // permite usar directivas
     ],
     exports: [
         HeroComponent,
