@@ -1,0 +1,36 @@
+<h3>Listado de héroes</h3>
+
+<ul class="mt-2 list-group">
+    <li 
+        *ngFor="let item of heroes"
+        class="lisst-group-item">
+        {{item}}
+    </li>
+</ul>
+<br>
+<button 
+    *ngIf="heroes.length>0"
+    (click)="eliminar()"
+    class="btn btn-primary">
+    Borrar último elemento
+</button>
+<div *ngIf="heroeBorrado;else NoBorrado">
+    <h3>Héroe borrado: <small class="text-danger">{{heroeBorrado}}</small></h3>
+</div>
+<ng-template #NoBorrado>
+    <h3>No se han borrado heroes</h3>
+</ng-template>
+<br>
+<div *ngIf="borrado;else NoBorrado">
+    <h3>Datos borrados</h3>
+</div>
+<ng-template #NoBorrado>
+    <h3>No se han borrado datos</h3>
+</ng-template>
+<div [ngSwitch]="valor">
+    <p *ngSwitchCase="1">El valor es uno.</p>
+    <p *ngSwitchCase="2">El valor es dos.</p>
+    <p *ngSwitchCase="3">El valor es tres.</p>
+    <p *ngSwitchDefault>Valor no conocido.</p>
+  </div>
+
