@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+// import { Heroe } from '../../interfaces/Heroe.interface';
+// import { HeroesService } from '../../services/heroes.service';
+// import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-heroes-list',
@@ -16,4 +19,13 @@ export class ListComponent {
     this.heroeBorrado= this.heroes.pop();
     this.heroeBorrado?this.borrado=true:this.borrado=false;
   }
+
+  // public heroes!: Observable<Heroe[]>;
+
+  // constructor(private heroesService: HeroesService) {}
+
+  
+  // ngOnInit(): void {
+  //   this.heroes = this.heroesService.obtenerHeroes();
+  // }
 }

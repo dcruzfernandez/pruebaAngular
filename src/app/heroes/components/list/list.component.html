@@ -3,7 +3,7 @@
 <ul class="mt-2 list-group">
     <li 
         *ngFor="let item of heroes"
-        class="lisst-group-item">
+        class="list-group-item">
         {{item}}
     </li>
 </ul>
@@ -34,3 +34,11 @@
     <p *ngSwitchDefault>Valor no conocido.</p>
   </div>
 
+
+  <!-- <ul class="mt-2 list-group">
+    <li 
+        *ngFor="let item of heroes | async"
+        class="list-group-item">
+        {{item.name}} - {{item.description}}
+    </li>
+</ul> -->
