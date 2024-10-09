@@ -1,6 +1,6 @@
 <h1>Lista de Tareas</h1>
 <ul>
   <li *ngFor="let todo of todos">
-    {{ todo.id }} - {{ todo.title }} - Completado: {{ todo.completed?'Realizado':'Pendiente' }}
+    {{ todo.id }} - {{ todo.title }} - <span class="text-danger">Completado: {{ todo.completed?'Si':'No' }}</span>
   </li>
 </ul>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HeroComponent } from './components/hero/hero.component';
 import { ListComponent } from './components/list/list.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,6 +18,8 @@ import { ListComponent } from './components/list/list.component';
         HeroComponent,
         ListComponent
     ],
-    providers: [],
+    providers: [
+        provideHttpClient(withInterceptorsFromDi())
+    ],
 })
 export class HeroesModule { }
