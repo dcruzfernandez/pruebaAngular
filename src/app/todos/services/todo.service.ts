@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Todo } from '../interfaces/todo.interface';
 
 @Injectable({
@@ -14,7 +14,9 @@ export class TodoService {
 
   // Método para obtener todos los "todos"
   getTodos(): Observable<Todo[]> {
-    return this.http.get<Todo[]>(this.apiUrl);
+      return this.http.get<Todo[]>(this.apiUrl);
+
+  
   }
     
 }
